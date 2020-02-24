@@ -1,0 +1,29 @@
+1. 填写用户名和邮箱作为标识，global表示这台机器上所有的git仓库都会用这个配置（邮箱和用户名）
+	git config --global user.name "zhang tingyue"
+	git config --global user.email "1938703194@qq.com"
+2. 创建版本库（repository）
+	2.1 在D:/git目录下新建一个testgit版本库
+		cd D:
+		cd git
+		mkdir testgit
+		cd testgit
+		pwd(该命令用于显示当前的目录)
+	2.2 把这个目录（D:/git/testgit）变成git可以管理的仓库
+		git init
+成功标志：testgit目录下出现.git的目录。该目录是Git来跟踪管理版本的。
+3. 跟踪管理版本
+	3.1 将文本/代码添加到暂存区（如readme.txt）
+		git add readme.txt
+	3.2 把文件提交到仓库
+		git commit -m "readme.txt提交"
+	3.3 查看是否有文件未提交
+		git status
+	      版本控制系统只能跟踪文本文件的改动，比如txt文件，网页，所有程序的代码等，
+	Git也不列外，版本控制系统可以告诉你每次的改动，但是图片，视频这些二进制文件，
+	虽能也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串
+	起来，也就是知道图片从1kb变成2kb，但是到底改了啥，版本控制也不知道。
+	3.4 查看(readme.txt)修改了哪些内容
+		git diff readme.txt
+	3.5 提交修改（3.1）和提交文件（3.2）
+4. git版本回退
+	
