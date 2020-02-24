@@ -24,6 +24,21 @@
 	起来，也就是知道图片从1kb变成2kb，但是到底改了啥，版本控制也不知道。
 	3.4 查看(readme.txt)修改了哪些内容
 		git diff readme.txt
-	3.5 提交修改（3.1）和提交文件（3.2）
+	3.5 查看（readme.txt）内容
+		cat readme.txt
+	3.6 提交修改（3.1）和提交文件（3.2）
 4. git版本回退
-	
+	4.1 查看历史记录
+		git log
+	该命令显示从最近到最远的显示日志，可以看见近3次提交。
+	4.2 要显示简洁的日志
+		git log --pretty=oneline
+	4.3 回退到上一个版本
+		git reset --hard HEAD^
+	4.4 回退到上上个版本
+		git reset --hard HEAD^^
+	4.5 回退到前100个版本的话
+		git reset --hard HEAD~100
+	4.6 退到当时最新的版本
+		git reset --hard e6282d5
+	版本号通过 git reflog 来显示。（e6282d5）
